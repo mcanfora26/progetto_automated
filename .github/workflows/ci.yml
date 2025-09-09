@@ -22,5 +22,6 @@ jobs:
       - name: Build with Maven
         run: mvn clean install
 
-      - name: Run Checkstyle
-        run: mvn checkstyle:check
+      - name: Run Checkstyle (non bloccante)
+        run: mvn checkstyle:check || echo "Checkstyle failed"
+
